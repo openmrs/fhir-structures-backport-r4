@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.openmrs.fhir</groupId>
+  <artifactId>fhir-structures-backport-r4</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>FHIR Structures Backport R4</name>
+  <description>Backporting features from newer FHIR versions to R4</description>
+
+  <inceptionYear>2024</inceptionYear>
+
+  <issueManagement>
+    <system>JIRA</system>
+    <url>https://issues.openmrs.org/</url>
+  </issueManagement>
+
+  <licenses>
+    <license>
+      <name>OpenMRS Public License</name>
+      <url>https://openmrs.org/wiki/License</url>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>OpenMRS LLC.</name>
+    <url>https://openmrs.org</url>
+  </organization>
+
+  <scm>
+    <connection>scm:git:git@github.com:openmrs/fhir-structures-backport-r4.git</connection>
+    <developerConnection>scm:git:git@github.com:openmrs/fhir-structures-backport-r4.git</developerConnection>
+    <url>https://github.com/openmrs/fhir-structures-backport-r4/</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <repositories>
+    <repository>
+      <id>openmrs-repo</id>
+      <name>OpenMRS Public Repository</name>
+      <url>https://mavenrepo.openmrs.org/public</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>openmrs-snapshots</id>
+      <name>OpenMRS Snapshot Repository</name>
+      <url>https://mavenrepo.openmrs.org/snapshots</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <url>https://repo1.maven.org/maven2</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>openmrs-repo</id>
+      <name>OpenMRS Public Repository</name>
+      <url>https://mavenrepo.openmrs.org/public</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>openmrs-snapshots</id>
+      <name>OpenMRS Snapshot Repository</name>
+      <url>https://mavenrepo.openmrs.org/snapshots</url>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+      <id>central</id>
+      <name>Maven Repository Switchboard</name>
+      <url>https://repo1.maven.org/maven2</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <distributionManagement>
+    <repository>
+      <id>openmrs-repo-modules</id>
+      <name>OpenMRS Nexus Modules</name>
+      <url>https://mavenrepo.openmrs.org/modules</url>
+    </repository>
+    <snapshotRepository>
+      <id>openmrs-repo-snapshots</id>
+      <name>OpenMRS Nexus Snapshots</name>
+      <url>https://mavenrepo.openmrs.org/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
+    <hapi.fhir.version>5.7.4</hapi.fhir.version>
+    <junit.jupiter.version>5.8.2</junit.jupiter.version>
+  </properties>
+
+  <dependencies>
+    <!-- HAPI FHIR -->
+    <dependency>
+      <groupId>ca.uhn.hapi.fhir</groupId>
+      <artifactId>hapi-fhir-structures-r4</artifactId>
+      <version>${hapi.fhir.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>ca.uhn.hapi.fhir</groupId>
+      <artifactId>hapi-fhir-base</artifactId>
+      <version>${hapi.fhir.version}</version>
+    </dependency>
+
+    <!-- Test Dependencies -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+    </plugins>
+  </build>
+</project>
