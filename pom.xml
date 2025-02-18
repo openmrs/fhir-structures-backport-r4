@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.openmrs.fhir</groupId>
     <artifactId>fhir-structures-backport-r4</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>FHIR Structures Backport R4</name>
     <description>Backporting features from newer FHIR versions to R4</description>
 
